@@ -1,16 +1,16 @@
 body {
   margin: 0;
-  background-color: #ffeb3b;
+  background: #ffeb3b;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-.pikachu {
+.pikachu-face {
   position: relative;
   width: 300px;
-  height: 350px;
+  height: 380px;
 }
 
 /* Ears */
@@ -18,12 +18,24 @@ body {
   position: absolute;
   width: 60px;
   height: 160px;
-  background-color: #fdd835;
+  background: #fdd835;
   border-radius: 50% 50% 0 0;
   z-index: 0;
 }
+.ear.left {
+  left: 0;
+  top: 0;
+  transform: rotate(-25deg);
+  transform-origin: bottom center;
+}
+.ear.right {
+  right: 0;
+  top: 0;
+  transform: rotate(25deg);
+  transform-origin: bottom center;
+}
 .ear::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   width: 100%;
@@ -31,30 +43,18 @@ body {
   background: black;
   border-radius: 50% 50% 0 0;
 }
-.ear.left {
-  top: 0;
-  left: 0;
-  transform: rotate(-25deg);
-  transform-origin: bottom;
-}
-.ear.right {
-  top: 0;
-  right: 0;
-  transform: rotate(25deg);
-  transform-origin: bottom;
-}
 
 /* Face */
 .face {
   position: absolute;
-  top: 80px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
-  width: 250px;
-  height: 250px;
-  background-color: #fdd835;
-  border-radius: 45% 45% 40% 40%;
-  border: 2px solid #000;
+  width: 260px;
+  height: 260px;
+  background: #fdd835;
+  border-radius: 50% 50% 45% 45%;
+  border: 3px solid #000;
   z-index: 1;
 }
 
@@ -63,44 +63,46 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background: #000;
   border-radius: 50%;
-  top: 70px;
+  top: 80px;
 }
 .eye.left {
-  left: 40px;
+  left: 55px;
 }
 .eye.right {
-  right: 40px;
+  right: 55px;
 }
 .shine {
+  position: absolute;
+  top: 6px;
+  left: 8px;
   width: 12px;
   height: 12px;
-  background: white;
+  background: #fff;
   border-radius: 50%;
-  margin: 6px;
 }
 
 /* Cheeks */
 .cheek {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: red;
   border-radius: 50%;
   top: 140px;
 }
 .cheek.left {
-  left: 20px;
+  left: 30px;
 }
 .cheek.right {
-  right: 20px;
+  right: 30px;
 }
 
 /* Mouth */
 .mouth {
   position: absolute;
-  top: 160px;
+  top: 165px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -110,25 +112,18 @@ body {
   border-bottom-right-radius: 50px 40px;
   overflow: hidden;
 }
-.top-lip {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 80px;
-  height: 40px;
-  background: #fdd835;
-  border-bottom-left-radius: 80px;
-  border-bottom-right-radius: 80px;
-}
+
+/* Tongue */
 .tongue {
   position: absolute;
   bottom: 0;
   left: 15px;
   width: 50px;
   height: 30px;
-  background: pink;
+  background: #ff7f7f;
   border-radius: 50%;
 }
+
 
 
 
