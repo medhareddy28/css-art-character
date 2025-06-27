@@ -1,16 +1,29 @@
 body {
   margin: 0;
-  background: #ffeb3b;
+  background-color: #ffeb3b;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-.pikachu-face {
+.pikachu {
   position: relative;
   width: 300px;
   height: 380px;
+}
+
+.face {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  background-color: #fdd835;
+  border-radius: 50% 50% 45% 45%;
+  border: 6px solid #000;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
 
 /* Ears */
@@ -18,24 +31,14 @@ body {
   position: absolute;
   width: 60px;
   height: 160px;
-  background: #fdd835;
+  background-color: #fdd835;
   border-radius: 50% 50% 0 0;
+  border: 5px solid #000;
+  border-bottom: none;
   z-index: 0;
 }
-.ear.left {
-  left: 0;
-  top: 0;
-  transform: rotate(-25deg);
-  transform-origin: bottom center;
-}
-.ear.right {
-  right: 0;
-  top: 0;
-  transform: rotate(25deg);
-  transform-origin: bottom center;
-}
 .ear::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -43,19 +46,15 @@ body {
   background: black;
   border-radius: 50% 50% 0 0;
 }
-
-/* Face */
-.face {
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 260px;
-  height: 260px;
-  background: #fdd835;
-  border-radius: 50% 50% 45% 45%;
-  border: 3px solid #000;
-  z-index: 1;
+.ear.left {
+  top: -80px;
+  left: 0;
+  transform: rotate(-25deg);
+}
+.ear.right {
+  top: -80px;
+  right: 0;
+  transform: rotate(25deg);
 }
 
 /* Eyes */
@@ -63,24 +62,22 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: #000;
+  background-color: #000;
   border-radius: 50%;
-  top: 80px;
+  top: 75px;
 }
 .eye.left {
-  left: 55px;
+  left: 45px;
 }
 .eye.right {
-  right: 55px;
+  right: 45px;
 }
 .shine {
-  position: absolute;
-  top: 6px;
-  left: 8px;
   width: 12px;
   height: 12px;
-  background: #fff;
+  background: white;
   border-radius: 50%;
+  margin: 6px;
 }
 
 /* Cheeks */
@@ -90,13 +87,25 @@ body {
   height: 44px;
   background: red;
   border-radius: 50%;
-  top: 140px;
+  top: 145px;
 }
 .cheek.left {
   left: 30px;
 }
 .cheek.right {
   right: 30px;
+}
+
+/* Nose */
+.nose {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
 }
 
 /* Mouth */
@@ -123,8 +132,3 @@ body {
   background: #ff7f7f;
   border-radius: 50%;
 }
-
-
-
-
-
