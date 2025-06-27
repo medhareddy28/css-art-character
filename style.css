@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #fce205;
+  background-color: #ffeb3b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,17 +10,16 @@ body {
 .pikachu {
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 350px;
 }
 
 /* Ears */
 .ear {
   position: absolute;
   width: 60px;
-  height: 150px;
-  background: #fcd800;
+  height: 160px;
+  background-color: #fdd835;
   border-radius: 50% 50% 0 0;
-  transform-origin: bottom center;
   z-index: 0;
 }
 .ear::after {
@@ -33,26 +32,28 @@ body {
   border-radius: 50% 50% 0 0;
 }
 .ear.left {
-  left: 20px;
   top: 0;
+  left: 0;
   transform: rotate(-25deg);
+  transform-origin: bottom;
 }
 .ear.right {
-  right: 20px;
   top: 0;
+  right: 0;
   transform: rotate(25deg);
+  transform-origin: bottom;
 }
 
-/* Head */
-.head {
+/* Face */
+.face {
   position: absolute;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
   width: 250px;
   height: 250px;
-  background: #fcd800;
-  border-radius: 50% 50% 45% 45%;
+  background-color: #fdd835;
+  border-radius: 45% 45% 40% 40%;
   border: 2px solid #000;
   z-index: 1;
 }
@@ -62,22 +63,22 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: #000;
+  background-color: #000;
   border-radius: 50%;
   top: 70px;
 }
 .eye.left {
-  left: 50px;
+  left: 40px;
 }
 .eye.right {
-  right: 50px;
+  right: 40px;
 }
 .shine {
   width: 12px;
   height: 12px;
   background: white;
   border-radius: 50%;
-  margin: 5px;
+  margin: 6px;
 }
 
 /* Cheeks */
@@ -99,7 +100,7 @@ body {
 /* Mouth */
 .mouth {
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -108,7 +109,6 @@ body {
   border-bottom-left-radius: 50px 40px;
   border-bottom-right-radius: 50px 40px;
   overflow: hidden;
-  z-index: 2;
 }
 .top-lip {
   position: absolute;
@@ -116,7 +116,7 @@ body {
   left: 0;
   width: 80px;
   height: 40px;
-  background: #fcd800;
+  background: #fdd835;
   border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px;
 }
@@ -129,6 +129,7 @@ body {
   background: pink;
   border-radius: 50%;
 }
+
 
 
 
